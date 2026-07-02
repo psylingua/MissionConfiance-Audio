@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission Confiance – Audio PsyLingua</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="brand">PsyLingua®</div>
+      <h1>Mission Confiance</h1>
+      <p>Misión Confianza · Mission Confidence</p>
+      <div class="badge">🎧 Audio trilingue</div>
+    </header>
+
+    <section class="player-card">
+      <div class="page-meta">
+        <span id="pageCounter">Page 1 / 1</span>
+        <span id="pageType">Mission Confiance</span>
+      </div>
+
+      <h2 id="pageTitle">Titre</h2>
+      <p id="pageSubtitle" class="subtitle"></p>
+
+      <div class="lang-tabs" aria-label="Choisir la langue">
+        <button class="lang-btn active" data-lang="fr">Français</button>
+        <button class="lang-btn" data-lang="es">Español</button>
+        <button class="lang-btn" data-lang="en">English</button>
+      </div>
+
+      <div id="contentBlocks" class="content-blocks"></div>
+
+      <audio id="audioPlayer" preload="metadata"></audio>
+
+      <div class="controls">
+        <button id="playBtn" class="play-btn">▶</button>
+        <div class="progress-wrap">
+          <div id="audioStatus" class="audio-status">Audio prêt</div>
+          <input id="progress" class="progress" type="range" min="0" max="100" value="0" />
+        </div>
+      </div>
+
+      <div class="speed-row">
+        <span>Vitesse</span>
+        <button class="speed-btn" data-speed="0.85">Lent</button>
+        <button class="speed-btn active" data-speed="1">Normal</button>
+        <button class="speed-btn" data-speed="1.2">Rapide</button>
+      </div>
+
+      <nav class="nav-row">
+        <button id="prevBtn">← Précédent</button>
+        <button id="nextBtn">Suivant →</button>
+      </nav>
+    </section>
+
+    <section id="pageDots" class="page-dots" aria-label="Navigation des pages"></section>
+
+    <footer>
+      PsyLingua® — psylingua.com
+    </footer>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
